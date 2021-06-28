@@ -11,3 +11,15 @@ variable "aws_this_access_key" {
 variable "aws_this_secret_key" {
   description = "AWS Secret Key for requester account"
 }
+
+variable "ecosystem" {
+  description = "The ecosystem this VPC Peering connection is for"
+}
+
+variable "this_region" {
+  description = "The source region"
+}
+
+variable "peer_region" {
+  description = "The destination region"
+}
