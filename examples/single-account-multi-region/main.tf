@@ -9,15 +9,12 @@ module "single_account_multi_region" {
   
   this_vpc_id = var.this_vpc_id
   peer_vpc_id = var.peer_vpc_id
-  this_ecosystem = var.ecosystem
-  this_region = var.this_region
-  peer_region = var.peer_region
 
 
   auto_accept_peering = true
 
   tags = {
-    Name        = "${this_ecosystem}-${this_region}-to-${peer_region}"
-    Ecosystem	= "${this_ecosystem}"
+    Name        = "${var.ecosystem}-${var.this_region}-to-${var.peer_region}"
+    Ecosystem	= "${var.ecosystem}"
   }
 }

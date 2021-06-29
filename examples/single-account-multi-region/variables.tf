@@ -14,12 +14,18 @@ variable "aws_this_secret_key" {
 
 variable "ecosystem" {
   description = "The ecosystem this VPC Peering connection is for"
+  type        = string
+  default     = "UNSET"
 }
 
 variable "this_region" {
   description = "The source region"
+  type        = string
+  default     = "us-east-1"
 }
 
 variable "peer_region" {
   description = "The destination region"
+  type        = string
+  default     = "us-east-2"
 }
